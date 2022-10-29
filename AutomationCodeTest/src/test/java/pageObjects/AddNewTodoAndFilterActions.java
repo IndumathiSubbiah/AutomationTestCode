@@ -94,8 +94,7 @@ public class AddNewTodoAndFilterActions  {
     }
 
     public void itemCalled(String completedTodo) {
-        By.xpath(format("//ul[@class='todo-list']//li[contains(.,'%s')]//input[@type='checkbox']", completedTodo));
-        driver.findElement(By.linkText(completedTodo)).click();
+       driver.findElement(By.xpath(format("//ul[@class='todo-list']//li[contains(.,'%s')]//input[@type='checkbox']", completedTodo))).click();
     }
 
     public void by(String filter) {
